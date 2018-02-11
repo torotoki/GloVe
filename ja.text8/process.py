@@ -47,7 +47,7 @@ def save(docs):
 
 
 if __name__ == '__main__':
-    dirname = os.path.join(os.path.dirname(__file__), './extracted')
+    dirname = os.path.join(os.path.dirname(__file__), 'wikiextractor/extracted')
     filenames = list_files(dirname)
     files = read_files(filenames)
     texts = normalize(files)

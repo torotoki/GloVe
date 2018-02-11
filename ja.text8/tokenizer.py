@@ -2,11 +2,6 @@ import linecache
 import random
 import MeCab
 
-random.seed(42)
-filename = 'tmp.txt'
-save_file = 'ja.text8'
-# LIMIT_BYTES = 100000000
-t = MeCab.Tagger('-Owakati')
 
 
 def get_byte_num(s):
@@ -14,6 +9,11 @@ def get_byte_num(s):
 
 
 if __name__ == '__main__':
+    random.seed(42)
+    filename = 'tmp.txt'
+    save_file = 'ja.text8'
+    # LIMIT_BYTES = 100000000
+    t = MeCab.Tagger('-Owakati')
     num_lines = sum(1 for line in open(filename))
     indices = list(range(num_lines))
     random.shuffle(indices)
