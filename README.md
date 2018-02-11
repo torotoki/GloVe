@@ -2,7 +2,11 @@
 
 このリポジトリはGloVeをクローンして日本語版Wikipediaに適用できるようにしたものです。データには日本語版Wikipediaを使用します。
 
+## 使い方
 
+`demo.sh`を実行すると、[ja.text8](https://github.com/Hironsan/ja.text8)からコーパスをダウンロードしてきて、それを使用して学習します。
+
+ja.text8コーパスは全体で100MB以下になるようランダムに記事を選んで処理されたものですが、すべてのWikipediaの記事を使用して学習する場合、このリポジトリにあるja.text8のフォークを使用することで大きなコーパスを生成できます。（`ja.text8/`を参照） 前処理済みコーパスは今後公開するかもしれません。しないかも。
 
 ## GloVe: Global Vectors for Word Representation
 
