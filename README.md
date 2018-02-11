@@ -1,3 +1,9 @@
+## 日本語版GloVe
+
+このリポジトリはGloVeをクローンして日本語版Wikipediaに適用できるようにしたものです。データには日本語版Wikipediaを使用します。
+
+
+
 ## GloVe: Global Vectors for Word Representation
 
 
