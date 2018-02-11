@@ -5,11 +5,11 @@ set -e
 # One optional argument can specify the language used for eval script: matlab, octave or [default] python
 
 make
-if [ ! -e text8 ]; then
+if [ ! -e ja.text8 ]; then
   if hash wget 2>/dev/null; then
-    wget http://mattmahoney.net/dc/text8.zip
+    wget https://s3-ap-northeast-1.amazonaws.com/dev.tech-sketch.jp/chakki/public/ja.text8.zip
   else
-    curl -O http://mattmahoney.net/dc/text8.zip
+    curl -O https://s3-ap-northeast-1.amazonaws.com/dev.tech-sketch.jp/chakki/public/ja.text8.zip
   fi
   unzip text8.zip
   rm text8.zip
@@ -24,8 +24,8 @@ SAVE_FILE=vectors
 VERBOSE=2
 MEMORY=4.0
 VOCAB_MIN_COUNT=5
-VECTOR_SIZE=50
-MAX_ITER=15
+VECTOR_SIZE=300
+MAX_ITER=50
 WINDOW_SIZE=15
 BINARY=2
 NUM_THREADS=8
