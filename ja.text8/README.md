@@ -1,3 +1,8 @@
+# Wikipediaの前処理関連
+
+このリポジトリは[ja.text8](https://github.com/Hironsan/ja.text8)をフォークして、100MBの制限を無くしたり、一部スクリプトを改変したものです。
+Wikipediaの全データを使用してデータを作ります。
+
 # ja.text8
 ja.text8 is a small (100MB) text corpus from the web (japanese wikipedia).
 
