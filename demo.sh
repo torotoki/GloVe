@@ -11,8 +11,8 @@ if [ ! -e ja.text8 ]; then
   else
     curl -O https://s3-ap-northeast-1.amazonaws.com/dev.tech-sketch.jp/chakki/public/ja.text8.zip
   fi
-  unzip text8.zip
-  rm text8.zip
+  unzip ja.text8.zip
+  rm ja.text8.zip
 fi
 
 CORPUS=ja.text8
@@ -41,7 +41,7 @@ echo "$ $BUILDDIR/glove -save-file $SAVE_FILE -threads $NUM_THREADS -input-file 
 $BUILDDIR/glove -save-file $SAVE_FILE -threads $NUM_THREADS -input-file $COOCCURRENCE_SHUF_FILE -x-max $X_MAX -iter $MAX_ITER -vector-size $VECTOR_SIZE -binary $BINARY -vocab-file $VOCAB_FILE -verbose $VERBOSE
 if [ "$CORPUS" = 'text8' ]; then
    if [ "$1" = 'matlab' ]; then
-       matlab -nodisplay -nodesktop -nojvm -nosplash < ./eval/matlab/read_and_evaluate.m 1>&2 
+       matlab -nodisplay -nodesktop -nojvm -nosplash < ./eval/matlab/read_and_evaluate.m 1>&2
    elif [ "$1" = 'octave' ]; then
        octave < ./eval/octave/read_and_evaluate_octave.m 1>&2
    else
