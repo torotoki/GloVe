@@ -9,7 +9,14 @@
 make
 ./demo.sh
 ```
-ja.text8コーパスは全体で100MB以下になるようランダムに記事を選んで処理されたものですが、すべてのWikipediaの記事を使用して学習する場合、このリポジトリにあるja.text8のフォークを使用することで大きなコーパスを生成できます。（`ja.text8/`を参照） 前処理済みコーパスは今後公開するかもしれません。しないかも。
+結果は`vector.txt`に書き込まれます．
+
+jatext8コーパスは全体で100MB以下になるようランダムに記事を選んで処理されたものですが、すべてのWikipediaの記事を使用して学習する場合、このリポジトリにあるja.text8のフォークを使用することで大きなコーパスを生成できます。（`ja.text8/`を参照）
+
+## 評価
+生成された単語ベクトルの評価に[日本語言い換えデータセット](https://github.com/tmu-nlp/JapaneseWordSimilarityDataset)を使用しています。評価用のスクリプトは`eval/python/ja_evaluation.py`にあります．
+データはこのリポジトリ内にコピーしているため、学習済みデータを作成し、numpy,matplotlibを入れた状態で実行すれば、人手の言い換え表現のスコアリングと単語ベクトル間のコサイン距離の標準誤差を表示・プロットできます。
+
 
 ## GloVe: Global Vectors for Word Representation
 
